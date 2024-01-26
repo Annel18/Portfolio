@@ -7,7 +7,7 @@
 }
 
 .carousel {
-    margin: 15px;
+    margin-top: 5rem;
     height: 450px;
     // padding: 5rem 0rem;
     // height: 60vh;
@@ -58,7 +58,7 @@
 }
 
 .carousel-indicators {
-    bottom: -5rem;
+    // bottom: -5rem;
 
     @media (max-width: 576px) {
         top: 0;
@@ -69,15 +69,15 @@
     }
 }
 
-// carousel lines at the bottom
-[data-bs-theme=dark] .carousel .carousel-indicators [data-bs-target],
-[data-bs-theme=dark].carousel .carousel-indicators [data-bs-target] {
-    background-color: var(--lightest);
+// // carousel lines at the bottom
+// [data-bs-theme=dark] .carousel .carousel-indicators [data-bs-target],
+// [data-bs-theme=dark].carousel .carousel-indicators [data-bs-target] {
+//     background-color: var(--lightest);
 
-    @media (max-width: 576px) {
-        background-color: ($secondary-color);
-    }
-}
+//     @media (max-width: 576px) {
+//         background-color: ($secondary-color);
+//     }
+// }
 
 .poster-container {
     // width: 100vw;

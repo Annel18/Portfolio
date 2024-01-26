@@ -20,7 +20,8 @@ main {
 .page {
     @include flex(column, center, center);
     // padding: 2rem 0rem;
-    // margin-top: 10rem;
+    padding-top: 5rem;
+    margin-top: 5rem;
     margin-bottom:10rem;
     background-color: $background-color;
     min-height: fit-content;
@@ -33,7 +34,7 @@ main {
     // text-decoration: underline;
     font-size: 4rem;
     color: $primary-color;
-    padding: 1rem 5rem;
+    padding: 1rem 11rem;
     border-bottom: 2px solid $primary-color;
 }
 
