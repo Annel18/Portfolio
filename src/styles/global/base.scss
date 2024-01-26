@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Termina Test', sans-serif;
+    margin: 0;
+}
+
+html {
+    font-size: 12px;
+    // min-width: min-content;
+}
+
+main {
+    margin-top: 40px;
+    padding: 4rem;
+    background-color: $background-color;
+}
+
+.page {
+    @include flex(column, center, center);
+    margin-bottom:5rem;
+}
+
+.section-title {
+    text-align: center;
+    // text-decoration: underline;
+    font-size: 4rem;
+    color: $primary-color;
+    padding: 1rem 5rem;
+    border-bottom: 2px solid $primary-color;
+}
+
+.section-sub {
+    padding: 2rem;
+    text-align: justify;
+    color: $secondary-color;
+    max-width: 50rem;
+}
+
+.justify {
+    text-align: justify;
+}
+
+// form button {
+//     margin: 20px;
+//     padding: 6px 40px;
+//     @include button(white, $background-color);
+// }
+
+// form button:hover {
+//     margin: 20px;
+//     padding: 6px 40px;
+//     @include button($background-color, white);
+// }
+
+// .spinner {
+//     padding-top: 5em;
+//     @include flex(row, center, center);
+// }
