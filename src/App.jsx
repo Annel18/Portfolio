@@ -5,6 +5,7 @@ import Projects from './components/Projects'
 import Experience from './components/Experience'
 import Interests from './components/Interests'
 import Contacts from './components/Contacts'
+import bckgImg from './assets/images/YarnFreddie.avif'
 
 export default function App() {
 
@@ -20,15 +21,17 @@ export default function App() {
     return (
         <>
             <header>
-                <NavBar navLinks={navLinks} />
-            </header>
-            <main>
                 <Home />
+            </header>
+            <main >
+                <NavBar navLinks={navLinks} bckgImg={bckgImg} />
+                {/* <div style={{ backgroundImage: `url(${bckgImg})`, backgroundSize: 'cover', backgroundRepeat: 'repeat-y', position: 'fixed', width: '100vw', height: '100vh', zIndex: '-1' }}> */}
                 <Projects />
                 <Experience />
                 <AboutMe />
                 <Interests />
                 <Contacts />
+                {/* </div> */}
             </main>
         </>
     )

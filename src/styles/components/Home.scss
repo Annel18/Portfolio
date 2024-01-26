@@ -1,0 +1,9 @@
+#home {
+    @include flex(column, center, center);
+    height: calc(100vh - 160px);
+    // padding: 2rem 0rem;
+    margin-bottom:10rem;
+    background-color: $background-color;
+    min-height: fit-content;
+    // z-index: 2;
+}

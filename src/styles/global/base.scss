@@ -9,15 +9,23 @@ html {
     // min-width: min-content;
 }
 
+
 main {
     margin-top: 40px;
-    padding: 4rem;
-    background-color: $background-color;
+    // background-image: url("../images/PP.jpg");
+    // background-size: cover;
+    // background-repeat: no-repeat; 
 }
 
 .page {
     @include flex(column, center, center);
-    margin-bottom:5rem;
+    // padding: 2rem 0rem;
+    // margin-top: 10rem;
+    margin-bottom:10rem;
+    background-color: $background-color;
+    min-height: fit-content;
+    // z-index: -;
+    position: relative;
 }
 
 .section-title {
