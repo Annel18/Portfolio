@@ -22,7 +22,7 @@ export default function Interests() {
     ]
 
     return (
-        <section className="page">
+        <section className="page" id="interests">
             <h1 className="section-title">Interests</h1>
             <div >
                 {Interests

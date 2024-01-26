@@ -65,11 +65,11 @@ export default function Projects() {
     ]
 
     return (
-        <section className="page">
+        <section className="page" id="projects" >
             <h1 className="section-title">Projects</h1>
             {/* <div className='carousel-page'> */}
                 {/* touch means you can use with touchscreen, wrap continues with no hard stop */}
-                <Carousel touch={true} wrap={true} data-bs-theme="dark" slide={true}>
+                <Carousel touch={true} wrap={true} data-bs-theme="dark" slide={true} >
                     {/* map through art for carousel to cycle through */}
                     {projects
                         .map((project, id) => {

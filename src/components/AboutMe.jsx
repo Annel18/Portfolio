@@ -40,7 +40,7 @@ export default function AboutMe() {
     ]
 
     return (
-        <section className="page">
+        <section className="page" id="about me">
             <h1 className="section-title">About Me</h1>
             <p className="section-sub">Throughout my architectural career spanning diverse sectors, I&apos;ve had the privilege of contributing to multiple award-winning projects. My journey led me to explore coding, initially during my MA in Architecture and Digital Media, and later while working with various computer-aided design tools. This exploration eventually steered me towards the path of software engineering. I thrive on close collaboration with colleagues and external consultancy. I find fulfilment in roles within medium-sized offices where personal connections foster satisfaction and meaningful contributions to the company.</p>
             <div className='index-page'>
