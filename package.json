@@ -1,6 +1,6 @@
 {
   "name": "porfolio",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "homepage": "https://annel18.github.io/Porfolio/",
   "type": "module",
@@ -8,6 +8,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
+    "start" : "react-script start",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview --port 8080"
