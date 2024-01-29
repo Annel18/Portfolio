@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { useState } from 'react'
 // import { Link } from 'react-router-dom'
 import { Container, Row, Col } from "react-bootstrap"
 import Carousel from 'react-bootstrap/Carousel'
@@ -59,17 +60,25 @@ export default function Projects() {
             timeframe: 'Solo Project | 10 days',
             description: 'This final GA project is a solo endeavour, presenting an application for architects to streamline building briefs and consolidate \'Room Data Sheets\' for non-domestic sectors (eg. schools), where many rooms share identical characteristics, this tool assists architects in defining and compiling specifics such as finishes, furniture, and equipment into project-specific templates. The backend database has been implemented in Python using Django Framework and consumed in React on the client side.',
             deployment: 'https://building-data-f6ca9aff8146.herokuapp.com/',
-            GitHubLink: 'https://github.com/Annel18/GA-SEI-P4-Building_Data/blob/main/README.md',
+            GitHubLink: 'https://github.com/Annel18/GA-SEI-P4-Building_Data',
             img: project4Img
         },
     ]
+    //! States
+    const [index, setIndex] = useState(0)
 
+    //! Functions
+    const handleSelect = (selectedIndex) => {
+        setIndex(selectedIndex)
+    }
+
+    //! JSX
     return (
         <section className="page" id="projects" >
             <h1 className="section-title">Projects</h1>
             {/* <div className='carousel-page'> */}
             {/* touch means you can use with touchscreen, wrap continues with no hard stop */}
-            <Carousel touch={true} wrap={true} data-bs-theme="dark" slide={true} >
+            <Carousel touch={true} wrap={true} data-bs-theme="dark" slide={true} interval={null} activeIndex={index} onSelect={handleSelect}>
                 {/* map through art for carousel to cycle through */}
                 {projects
                     .map((project, id) => {
@@ -77,49 +86,84 @@ export default function Projects() {
                             // has link to go to individual ID page
                             <Carousel.Item key={id}>
                                 <Container fluid
-                                // className="container-grid"
+                                // className="container-carousel"
                                 >
                                     <Row
                                         className="items-list"
                                     >
                                         <Col
                                             // className='single-container'
-                                            sm={6}
-                                        // style={{ backgroundImage: `url(${project.img})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', minHeight: '500px' }}
+                                            // sm={true}
+                                            xs={0}
+                                            s={6}
+                                            md={6}
+                                            lg={6}
+                                            xl={6}
+                                            xxl={6}
+                                        // style={{ backgroundImage: `url(${project.img})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}
                                         >
                                             <div className="poster-container">
                                                 <div className="poster" style={{ backgroundImage: `url(${project.img})` }}></div>
                                             </div>
                                         </Col>
-                                        <Col>
+                                        <Col
+                                        // sm={true}
+                                        // xs={0}
+                                        // s={6}
+                                        // md={6}
+                                        // lg={6}
+                                        // xl={6}
+                                        // xxl={6}
+                                        >
                                             <Row><h3>{project.name}</h3></Row>
                                             <Row><p>{project.timeframe}</p></Row>
-                                            <Row>{project.skills
-                                                .map((skill, i) => {
-                                                    return (
-                                                        <Col
-                                                            className='single-container'
-                                                            key={i}
-                                                            sm={1}
-                                                        >
-                                                            <div className="rails" style={{ height: '5rem' }}>
-                                                                <img className="thumbnail" src={skill} alt={skill} />
-                                                            </div>
-                                                        </Col>
-                                                    )
-                                                })
-                                            }
-                                            </Row>
+                                            <Container>
+                                                <Row>{project.skills
+                                                    .map((skill, i) => {
+                                                        return (
+                                                            <Col
+                                                                className='single-container'
+                                                                key={i}
+                                                                xs={2}
+                                                                s={2}
+                                                                md={2}
+                                                                lg={2}
+                                                                xl={1}
+                                                                xxl={1}
+                                                            >
+                                                                <div className="rails" style={{ height: '5rem' }}>
+                                                                    <img className="thumbnail" src={skill} alt={skill} />
+                                                                </div>
+                                                            </Col>
+                                                        )
+                                                    })
+                                                }
+                                                </Row>
+                                            </Container>
                                             <Row><p className="justify">{project.description}</p></Row>
                                             <Row>
-                                                <Col className='single-container' sm={1} >
+                                                <Col className='single-container'
+                                                    xs={2}
+                                                    s={2}
+                                                    md={2}
+                                                    lg={2}
+                                                    xl={1}
+                                                    xxl={1}
+                                                >
                                                     <div className="rails" style={{ height: '5rem' }}>
                                                         <a href={project.GitHubLink} target="_blank">
                                                             <img className="thumbnail" src={gitHubIcon} alt={gitHubIcon} />
                                                         </a>
                                                     </div>
                                                 </Col>
-                                                <Col className='single-container' sm={1}>
+                                                <Col className='single-container'
+                                                    xs={2}
+                                                    s={2}
+                                                    md={2}
+                                                    lg={2}
+                                                    xl={1}
+                                                    xxl={1}
+                                                >
                                                     <div className="rails" style={{ height: '5rem' }}>
                                                         <a href={project.deployment} target="_blank">
                                                             <img className="thumbnail" src={linkIcon} alt={linkIcon} />

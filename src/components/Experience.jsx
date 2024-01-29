@@ -55,13 +55,13 @@ export default function Experience() {
             <div >
                 {experiences
                     .map((exp, id) => {
-                        if (id%2!==0){
+                        if (id % 2 !== 0) {
                             return (
                                 <Container className="container-exp" key={id} fluid >
                                     <Row className="items-list" >
                                         <Col >
-                                            <h2 style={{textAlign:'right'}}>{exp.jobTitle}</h2>
-                                            <h5 style={{textAlign:'right'}}>{exp.timeframe}</h5>
+                                            <h2 style={{ textAlign: 'right' }}>{exp.jobTitle}</h2>
+                                            <h5 style={{ textAlign: 'right' }}>{exp.timeframe}</h5>
                                             {/* {function createDescriptionMarkup() {
                                                 return { __html: `${experiences.description}` }
                                             }
@@ -70,10 +70,15 @@ export default function Experience() {
                                         </Col>
                                         <Col
                                             className="single-container"
-                                            sm={6}
+                                            xs={0}
+                                            s={6}
+                                            md={6}
+                                            lg={6}
+                                            xl={6}
+                                            xxl={6}
                                         // style={{alignItems:'flex-end'}}
                                         >
-                                            <div style={{textAlign:'left'}} className="logo-container">
+                                            <div style={{ textAlign: 'left' }} className="logo-container">
                                                 {/* <div className="poster" style={{ backgroundImage: `url(${project.img})` }}></div> */}
                                                 {/* <div className="poster" style={{ backgroundImage: `url(${exp.img})`, textAlign:'rigth' }}></div> */}
                                                 <img className="logo" src={exp.img} alt={exp.img} />
@@ -89,13 +94,18 @@ export default function Experience() {
                                     <Row className="items-list" >
                                         <Col
                                             className="single-container"
-                                            sm={6}
+                                            xs={0}
+                                            s={6}
+                                            md={6}
+                                            lg={6}
+                                            xl={6}
+                                            xxl={6}
                                         // style={{alignItems:'flex-end'}}
                                         >
                                             <div className="logo-container">
                                                 {/* <div className="poster" style={{ backgroundImage: `url(${project.img})` }}></div> */}
                                                 {/* <div className="poster" style={{ backgroundImage: `url(${exp.img})`, textAlign:'rigth' }}></div> */}
-                                                <img className="logo" src={exp.img} alt={exp.img} />
+                                                <img className="logo" src={exp.img} alt={exp.img} style={{maxWidth:'auto'}}/>
                                             </div>
                                         </Col>
                                         <Col >
