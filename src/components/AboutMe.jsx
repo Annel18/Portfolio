@@ -54,9 +54,12 @@ export default function AboutMe() {
                                     <Col
                                         className='single-container'
                                         key={i}
-                                        xs={6}
+                                        xs={4}
+                                        s={4}
                                         md={4}
                                         lg={3}
+                                        xl={3}
+                                        xxl={3}
                                     >
                                         <div className="rails">
                                             <div className="thumbnail" style={{ backgroundImage: `url(${skill.logo})` }}></div>

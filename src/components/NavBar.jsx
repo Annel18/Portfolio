@@ -10,10 +10,10 @@ export default function NavBar({ navLinks, bckgImg }) {
                     </li>
                 </ul>
             </nav>
-            <nav>
-            <div style={{ backgroundImage: `url(${bckgImg})`, backgroundSize: 'cover', height: '100vh', position: 'sticky', zIndex:'-2'}}></div>
-            </nav>
-            {/* <img src={bckgImg} alt={bckgImg} style={{ width: '100vw', height:'100vh', zIndex:'-2' , position: 'relative' }}/> */}
+            {/* <nav> */}
+            {/* <img src={bckgImg} alt={bckgImg} style={{ width: '100vw', height:'100vh', zIndex:'-2' , position: 'sticky' }}/> */}
+            {/* <div style={{ backgroundImage: `url(${bckgImg})`, backgroundSize: 'contain', height: '100vh', width: '100vw', position: 'sticky', zIndex:'-2'}}></div> */}
+            {/* </nav> */}
         </>
     )
 }

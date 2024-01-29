@@ -2,23 +2,26 @@
     box-sizing: border-box;
     font-family: 'Termina Test', sans-serif;
     margin: 0;
+    
 }
 
-html {
+:root {
     font-size: 12px;
-    // width:;
+    // width: -webkit-fill-available;
 }
 
 body{
-    // width: auto;
+    display: block;
+    min-width: 100%;
+    // overflow: hidden;
 }
 
-main {
-    margin-top: 40px;
+// main {
+    // margin-top: 40px;
     // background-image: url("../images/PP.jpg");
     // background-size: cover;
     // background-repeat: no-repeat; 
-}
+// }
 
 .page {
     @include flex(column, center, center);
@@ -39,6 +42,10 @@ main {
     color: $primary-color;
     padding: 1rem 11rem;
     border-bottom: 2px solid $primary-color;
+    @media (max-width:768px) {
+        padding: 1rem;
+        font-size: 6vmin;
+    }
 }
 
 .section-sub {

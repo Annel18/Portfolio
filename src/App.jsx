@@ -25,13 +25,15 @@ export default function App() {
             </header>
             <main >
                 <NavBar navLinks={navLinks} bckgImg={bckgImg} />
-                {/* <div style={{ backgroundImage: `url(${bckgImg})`, backgroundSize: 'cover', backgroundRepeat: 'repeat-y', position: 'fixed', width: '100vw', height: '100vh', zIndex: '-1' }}> */}
+                {/* <div style={{ backgroundImage: `url(${bckgImg})`, backgroundSize: 'cover', backgroundRepeat: 'repeat-y', position: 'fixed', width: '100vw', height: '100vh', zIndex: '-1' }}>
+                    <div></div>
+                </div> */}
+                <img src={bckgImg} alt={bckgImg} style={{ width: '100vw', height:'100vh', zIndex:'-2' , position: 'fixed', top:0, left:0 }}/>
                 <Projects />
                 <Experience />
                 <AboutMe />
                 <Interests />
                 <Contacts />
-                {/* </div> */}
             </main>
         </>
     )
