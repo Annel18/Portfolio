@@ -62,12 +62,13 @@ body{
 .button {
     margin: 20px;
     padding: 6px 40px;
+    height: 5rem;
+    @include button($primary-color, $background-color);
+    @include flex(row,center,center);
     img{
 
         height: 2rem;
     }
-    @include button($primary-color, $background-color);
-    @include flex(row,center,center);
 }
 
 .button:hover {
@@ -79,7 +80,7 @@ body{
     }
 }
 .button-container {
-    height: 6rem;
+    height: 8rem;
     width: -webkit-fill-available;
 }
 
