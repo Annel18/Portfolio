@@ -75,3 +75,8 @@ body{
 //     padding-top: 5em;
 //     @include flex(row, center, center);
 // }
+
+a{
+    text-decoration: none;
+    color: $secondary-color;
+}
