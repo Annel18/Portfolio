@@ -13,10 +13,10 @@ export default function Experience() {
 
     const experiences = [
         {
-            jobTitle: 'Software Engineering Immersive',
+            jobTitle: 'Software Engineering Immersive - Student',
             timeframe: 'General Assembly (Oct 2023 - Jan 2024)',
             img: gaLogo,
-            description: '<p>This twelve-week course has been one of the most enjoyable and unforgettable experiences of my life. My love for learning combined with a natural understanding of logic and programming fundamentals has allowed me to develop my technical skills at an accelerated rate. Together with my technical development, the course has given me the opportunity to work with my classmates on various projects, giving me an acute awareness for the value of teamwork and the sharing of knowledge. I have finished the course with a great sense of pride in my achievements and my projects, and an insatiable appetite to continue to learn more.</p>'
+            description: '<p>This three-month program has been highly rewarding, allowing me to significantly improve my technical skills at a rapid pace. In addition to fostering my technical growth, it provided opportunities to collaborate with classmates on a variety of projects, emphasizing the importance of teamwork, pair coding, and knowledge exchange in the software engineering field. Finishing the course has instilled in me a profound sense of pride in my accomplishments and an ever-growing enthusiasm for continuous learning.</p>'
         },
         {
             jobTitle: 'Senior Architect',
