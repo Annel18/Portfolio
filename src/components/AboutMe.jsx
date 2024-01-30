@@ -62,7 +62,7 @@ export default function AboutMe() {
                                         xxl={3}
                                     >
                                         <div className="rails">
-                                            <div className="thumbnail" style={{ backgroundImage: `url(${skill.logo})` }}></div>
+                                            <img className="thumbnail" src={skill.logo} alt={skill.logo}></img>
                                             <p>{skill.name}</p>
                                         </div>
                                     </Col>
