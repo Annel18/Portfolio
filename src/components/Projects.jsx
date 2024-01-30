@@ -142,31 +142,23 @@ export default function Projects() {
                                             </Container>
                                             <Row><p className="justify">{project.description}</p></Row>
                                             <Row>
-                                                <Col className='single-container'
-                                                    xs={2}
-                                                    s={2}
-                                                    md={2}
-                                                    lg={2}
-                                                    xl={1}
-                                                    xxl={1}
+                                                <Col
+                                                    className='single-container'
+                                                    sm={6}
                                                 >
-                                                    <div className="rails" style={{ height: '5rem' }}>
+                                                    <div className='button-container'>
                                                         <a href={project.GitHubLink} target="_blank">
-                                                            <img className="thumbnail" src={gitHubIcon} alt={gitHubIcon} />
+                                                            <p className="button"><img src={gitHubIcon} alt={gitHubIcon} />View on GitHub</p>
                                                         </a>
                                                     </div>
                                                 </Col>
-                                                <Col className='single-container'
-                                                    xs={2}
-                                                    s={2}
-                                                    md={2}
-                                                    lg={2}
-                                                    xl={1}
-                                                    xxl={1}
+                                                <Col
+                                                    className='single-container'
+                                                    sm={6}
                                                 >
-                                                    <div className="rails" style={{ height: '5rem' }}>
+                                                    <div className='button-container'>
                                                         <a href={project.deployment} target="_blank">
-                                                            <img className="thumbnail" src={linkIcon} alt={linkIcon} />
+                                                            <p className="button"><img src={linkIcon} alt={linkIcon} />Open Project</p>
                                                         </a>
                                                     </div>
                                                 </Col>
