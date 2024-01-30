@@ -49,7 +49,6 @@ export default function AboutMe() {
                         {skills
                             // .sort((a, b) => a.name.localeCompare(b.name))
                             .map((skill, i) => {
-                                { console.log(skill.name) }
                                 return (
                                     <Col
                                         className='single-container'
