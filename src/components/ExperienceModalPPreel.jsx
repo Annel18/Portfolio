@@ -1,20 +1,26 @@
+import { useState } from 'react'
+
 import { Container, Row, Col } from "react-bootstrap"
 import Carousel from 'react-bootstrap/Carousel'
 
 import PP_QEii from '../assets/images/PP_QEII.jpg'
 import PP_BMAprimary from '../assets/images/PP_BMAprimary.jpg'
-import PP_BMApavillion from '../assets/images/PP_BMApavillion.jpg'
-import PP_BMAsecondary from '../assets/images/PP_BMAsecondary.jpg'
+import PP_BMApavillion from '../assets/images/PP_BMApavillion.jpeg'
+import PP_BMAsecondary from '../assets/images/PP_BMAsecondary.jpeg'
 import PP_Barlby from '../assets/images/PP_Barlby.jpg'
 import PP_Cura from '../assets/images/PP_CURA.jpg'
-import PP_muswellHillPractice from '../assets/images/PP_muswellHillPractice.jpg'
-import PP_smms from '../assets/images/PP_smms.jpg'
-import PP_grenfellNusery from '../assets/images/PP_grenfellNusery.jpg'
-import PP_UoKExtension from '../assets/images/PP_UoKExtension.jpg'
-import PP_UoKRefurb from '../assets/images/PP_UoKRefurb.jpg'
+import PP_muswellHillPractice from '../assets/images/PP_muswellHillPractice.jpeg'
+import PP_smms from '../assets/images/PP_smms.jpeg'
+import PP_grenfellNusery from '../assets/images/PP_grenfellNusery.jpeg'
+import PP_UoKExtension from '../assets/images/PP_UoKExtension.jpeg'
+import PP_UoKRefurb from '../assets/images/PP_UoKRefurb.jpeg'
 
 export default function ExperienceModalPPreel() {
-    projects = [
+    const [index, setIndex] = useState(0)
+    const handleSelect = (selectedIndex) => {
+        setIndex(selectedIndex)
+    }
+    const projects = [
         {
             image: PP_QEii,
             sector: 'Healthcare',
@@ -141,22 +147,23 @@ export default function ExperienceModalPPreel() {
         }
     ]
     return (
-        <section className="page" id="projects" >
-            <h1 className="section-title">Projects</h1>
+        <section>
             {/* <div className='carousel-page'> */}
             {/* touch means you can use with touchscreen, wrap continues with no hard stop */}
             <Carousel touch={true} wrap={true} data-bs-theme="dark" slide={true} interval={null} activeIndex={index} onSelect={handleSelect}>
                 {/* map through art for carousel to cycle through */}
                 {projects
+                    .sort((a, b) =>  b.awards.length - a.awards.length)
                     .map((project, id) => {
                         return (
                             // has link to go to individual ID page
                             <Carousel.Item key={id}>
-                                <Container fluid
+                                <Container
+                                // fluid
                                 // className="container-carousel"
                                 >
                                     <Row
-                                        className="items-list"
+                                    className="items-list"
                                     >
                                         <Col
                                             // className='single-container'
@@ -170,17 +177,17 @@ export default function ExperienceModalPPreel() {
                                         // style={{ backgroundImage: `url(${project.img})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}
                                         >
                                             <div className="poster-container">
-                                                <div className="poster" style={{ backgroundImage: `url(${project.image})` }}></div>
+                                            <div className="poster" style={{ backgroundImage: `url(${project.image})` }}></div>
                                             </div>
                                         </Col>
                                         <Col>
-                                            <Row><p>{project.sector}</p></Row>
                                             <Row><h3>{project.name}</h3></Row>
-                                            <Row><p>Client: {project.clients}</p></Row>
-                                            <Row><p>RIBA stages: {project.ribaStagesOfInvolvement}</p></Row>
-                                            <Row><p>Role: {project.roles}</p></Row>
-                                            <Row><p>Completion Date: {project.completion}</p></Row>
-                                            <Row><p>Awards:</p></Row>
+                                            <Row><p></p></Row>
+                                            <Row><p><b>Client:</b> {project.clients}</p></Row>
+                                            <Row><p><b>RIBA stages involment:</b> {project.ribaStagesOfInvolvement}</p></Row>
+                                            <Row><p><b>Role:</b> {project.roles}</p></Row>
+                                            <Row><p><b>Completion Date:</b> {project.completion}</p></Row>
+                                            <Row><p><b>Awards:</b></p></Row>
                                             <Container>
                                                 <Row>{project.awards
                                                     .map((award, i) => {

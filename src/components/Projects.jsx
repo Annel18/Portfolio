@@ -93,8 +93,7 @@ export default function Projects() {
                                         className="items-list"
                                     >
                                         <Col
-                                            // className='single-container'
-                                            // sm={true}
+
                                             xs={0}
                                             s={6}
                                             md={6}
@@ -108,13 +107,7 @@ export default function Projects() {
                                             </div>
                                         </Col>
                                         <Col
-                                        // sm={true}
-                                        // xs={0}
-                                        // s={6}
-                                        // md={6}
-                                        // lg={6}
-                                        // xl={6}
-                                        // xxl={6}
+
                                         >
                                             <Row><h3>{project.name}</h3></Row>
                                             <Row><p>{project.timeframe}</p></Row>
