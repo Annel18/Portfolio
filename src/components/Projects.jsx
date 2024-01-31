@@ -3,6 +3,7 @@ import { useState } from 'react'
 // import { Link } from 'react-router-dom'
 import { Container, Row, Col } from "react-bootstrap"
 import Carousel from 'react-bootstrap/Carousel'
+
 import pyIcon from '../assets/icons/Python.svg'
 import jsIcon from '../assets/icons/JavaScript.svg'
 import reactIcon from '../assets/icons/React.svg'

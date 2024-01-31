@@ -1,12 +1,17 @@
 /* eslint-disable react/prop-types */
 // import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import ExperienceModalPPreel from './ExperienceModalPPreel'
+
 import { Container, Row, Col } from "react-bootstrap"
+import Modal from 'react-bootstrap/Modal'
+
 import jdaLogo from '../assets/icons/jdaLogo.svg'
 import gaLogo from '../assets/icons/GALogo.svg'
 import ppImg from '../assets/icons/ppLogo.svg'
 import jbsImg from '../assets/icons/jbsLogo.svg'
 import wamLogo from '../assets/icons/wam-logo.png'
-
+import reelIcon from '../assets/icons/Reel.svg'
 
 
 export default function Experience() {
@@ -22,6 +27,7 @@ export default function Experience() {
             jobTitle: 'Senior Architect',
             timeframe: 'Penoyre & Prasad (Feb 2013 - July 2023)',
             img: ppImg,
+            projects: reelIcon,
             description: '<p>I attained my qualification as an architect while working with P&P. Since 2015, I\'ve served as a project architect, accumulating significant experience across diverse sectors, including Healthcare, Schools, Higher Education, Residential, and Science & Technology. This journey has provided me the opportunity to contribute to multiple award-winning projects. In addition to being a project architect on school and health projects, I worked extensively with BIM and excelled in CAD management. As part of the studio CAD Team, I have been instrumental in the creation of studio templates and workflow management.</br></br>Career path: <ul><li>Senior architect (2020 - 2023) </li><li>Architect (2015 - 2020) - I immediately fulfilled the role of Project Architect after qualification </li><li>Architectural Assistant (2013 - 2015)</ul></p>'
         },
         {
@@ -40,14 +46,13 @@ export default function Experience() {
             jobTitle: 'Architectural Assistant',
             timeframe: 'Jean-Charles De Groote & Associés (Feb 2010 - Sep 2010)',
             img: jdaLogo,
-            description: '<p>Before moving to London I worked as an architectural assistant for JDA in Brussels, Belgium. - I mainly worked on the restoration of existing buildings, renovation and regeneration, such as the transformation of an old farm with listed façades into 25 dwellings.</p>'
+            description: '<p>Before moving to London I worked as an architectural assistant for JDA in Brussels, Belgium. I mainly worked on the restoration of existing buildings, renovation and regeneration, such as the transformation of an old farm with listed façades into 25 dwellings.</p>'
         },
     ]
 
-    //       //! Functions
-    //   function createDescriptionMarkup() {
-    //     return { __html: `${experiences.description}` };
-    //   }
+    const [open, setOpen] = useState(false)
+    const handleOpenProjectReelPP = () => setOpen(true)
+    const handleCloseProjectReelPP = () => setOpen(false)
 
     return (
         <section className="page" id="experience">
@@ -62,10 +67,29 @@ export default function Experience() {
                                         <Col >
                                             <h2 style={{ textAlign: 'right' }}>{exp.jobTitle}</h2>
                                             <h5 style={{ textAlign: 'right' }}>{exp.timeframe}</h5>
-                                            {/* {function createDescriptionMarkup() {
-                                                return { __html: `${experiences.description}` }
+                                            {exp.projects
+                                                ?
+                                                <>
+                                                    <button className="button" onClick={handleOpenProjectReelPP} style={{ width: '-webkit-fill-available', margin: '0' }}><img src={exp.projects} alt={reelIcon} style={{ paddingRight: '1rem' }} />Projects Reel</button>
+                                                    <Modal
+                                                        size="lg"
+                                                        show={open}
+                                                        onHide={handleCloseProjectReelPP}
+                                                        aria-labelledby="example-modal-sizes-title-lg"
+                                                    >
+                                                        <Modal.Header closeButton>
+                                                            <Modal.Title id="example-modal-sizes-title-lg">
+                                                                Penoyre & Prasad Portfolio Preview
+                                                            </Modal.Title>
+                                                        </Modal.Header>
+                                                        <Modal.Body className="modal-container">
+                                                            <ExperienceModalPPreel setOpen={setOpen} />
+                                                        </Modal.Body>
+                                                    </Modal>
+                                                </>
+                                                :
+                                                <></>
                                             }
-                                        } */}
                                             <div className="justify" dangerouslySetInnerHTML={{ __html: `${exp.description}` }} />
                                         </Col>
                                         <Col
@@ -76,11 +100,8 @@ export default function Experience() {
                                             lg={6}
                                             xl={6}
                                             xxl={6}
-                                        // style={{alignItems:'flex-end'}}
                                         >
                                             <div style={{ textAlign: 'left' }} className="logo-container">
-                                                {/* <div className="poster" style={{ backgroundImage: `url(${project.img})` }}></div> */}
-                                                {/* <div className="poster" style={{ backgroundImage: `url(${exp.img})`, textAlign:'rigth' }}></div> */}
                                                 <img className="logo" src={exp.img} alt={exp.img} />
                                             </div>
                                         </Col>
@@ -100,21 +121,14 @@ export default function Experience() {
                                             lg={6}
                                             xl={6}
                                             xxl={6}
-                                        // style={{alignItems:'flex-end'}}
                                         >
                                             <div className="logo-container">
-                                                {/* <div className="poster" style={{ backgroundImage: `url(${project.img})` }}></div> */}
-                                                {/* <div className="poster" style={{ backgroundImage: `url(${exp.img})`, textAlign:'rigth' }}></div> */}
-                                                <img className="logo" src={exp.img} alt={exp.img} style={{maxWidth:'auto'}}/>
+                                                <img className="logo" src={exp.img} alt={exp.img} style={{ maxWidth: 'auto' }} />
                                             </div>
                                         </Col>
                                         <Col >
                                             <h2 >{exp.jobTitle}</h2>
                                             <h5>{exp.timeframe}</h5>
-                                            {/* {function createDescriptionMarkup() {
-                                                return { __html: `${experiences.description}` }
-                                            }
-                                        } */}
                                             <div className="justify" dangerouslySetInnerHTML={{ __html: `${exp.description}` }} />
                                         </Col>
                                     </Row>
@@ -122,7 +136,6 @@ export default function Experience() {
                             )
                         }
                     })}
-                {/* </Carousel> */}
             </div >
         </section>
     )
