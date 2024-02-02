@@ -153,20 +153,20 @@ export default function ExperienceModalPPreel() {
             <Carousel touch={true} wrap={true} data-bs-theme="dark" slide={true} interval={null} activeIndex={index} onSelect={handleSelect}>
                 {/* map through art for carousel to cycle through */}
                 {projects
-                    .sort((a, b) =>  b.awards.length - a.awards.length)
+                    .sort((a, b) => b.awards.length - a.awards.length)
                     .map((project, id) => {
                         return (
                             // has link to go to individual ID page
                             <Carousel.Item key={id}>
                                 <Container
                                 // fluid
-                                // className="container-carousel"
+                                className="container-carousel"
                                 >
                                     <Row
-                                    className="items-list"
+                                        className="items-list"
                                     >
                                         <Col
-                                            // className='single-container'
+                                            className='single-container'
                                             // sm={true}
                                             xs={0}
                                             s={6}
@@ -174,11 +174,11 @@ export default function ExperienceModalPPreel() {
                                             lg={6}
                                             xl={6}
                                             xxl={6}
-                                        // style={{ backgroundImage: `url(${project.img})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}
+                                        style={{ backgroundImage: `url(${project.image})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition:'center' }}
                                         >
-                                            <div className="poster-container">
-                                            <div className="poster" style={{ backgroundImage: `url(${project.image})` }}></div>
-                                            </div>
+                                            {/* <div className="poster-container">
+                                                <img className="poster" href={project.image} />
+                                            </div> */}
                                         </Col>
                                         <Col>
                                             <Row><h3>{project.name}</h3></Row>

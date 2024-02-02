@@ -87,24 +87,25 @@ export default function Projects() {
                             // has link to go to individual ID page
                             <Carousel.Item key={id}>
                                 <Container fluid
-                                // className="container-carousel"
+                                className="container-carousel"
                                 >
                                     <Row
                                         className="items-list"
                                     >
                                         <Col
-
+                                            className='single-container'
+                                            // sm={true}
                                             xs={0}
                                             s={6}
                                             md={6}
                                             lg={6}
                                             xl={6}
                                             xxl={6}
-                                        // style={{ backgroundImage: `url(${project.img})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}
+                                        style={{ backgroundImage: `url(${project.img})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgrountPosition:'center' }}
                                         >
-                                            <div className="poster-container">
+                                            {/* <div className="poster-container">
                                                 <div className="poster" style={{ backgroundImage: `url(${project.img})` }}></div>
-                                            </div>
+                                            </div> */}
                                         </Col>
                                         <Col
 
