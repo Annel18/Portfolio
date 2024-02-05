@@ -133,8 +133,8 @@ export default function Projects() {
                                                                 xxl={1}
                                                                 title={skill.name}
                                                             >
-                                                                <div className="rails" style={{ height: '5rem' }}>
-                                                                    <img className="thumbnail" src={skill.logo} alt={skill.name} />
+                                                                <div className="rails" title={skill.name} style={{ height: '5rem' }}>
+                                                                    <img className="thumbnail"  title={skill.name} src={skill.logo} alt={skill.name} />
                                                                 </div>
                                                             </Col>
                                                         )
