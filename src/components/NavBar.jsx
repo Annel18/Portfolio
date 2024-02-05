@@ -42,7 +42,7 @@ export default function NavBar({ navLinks, bckgImg }) {
                         <nav>
                             <ul>
                                 <li>
-                                    {navLinks.map((link, i) => <a key={i} href={`#${link.toLowerCase()}`}>{link} </a>)}
+                                    {navLinks.map((link, i) => <a key={i} href={`#${link.toLowerCase()}`} onClick={handleClose}>{link} </a>)}
                                 </li>
                             </ul>
                         </nav>
