@@ -30,36 +30,36 @@ export default function Projects() {
     const projects = [
         {
             name: 'Minesweeper',
-            skills: [jsIcon, cssLogo, htmlLogo],
+            skills: [{ name: 'JavaScript', logo: jsIcon }, { name: 'CSS', logo: cssLogo }, { name: 'HTML', logo: htmlLogo }],
             timeframe: 'Solo Project | 7 days',
             description: 'This first project is a grid-based game inspired by the classic Windows PC game. Using vanilla JavaScript for DOM manipulation, this first project includes separate files for HTML, CSS, and JS. The chosen theme is ‘The Three Little Pigs,’ where the game levels follow the tale\'s storyline.',
             deployment: 'https://annel18.github.io/GA-SEI-P1-Minesweeper/',
-            GitHubLink: 'https://github.com/Annel18/GA-SEI-P1-Minesweeper/blob/main/README.md',
+            GitHubLink: 'https://github.com/Annel18/GA-SEI-P1-Minesweeper/',
             img: project1Img
         },
         {
             name: 'Family Movie Night',
-            skills: [jsIcon, cssLogo, htmlLogo, sassIcon, reactIcon, nodeJsIcon],
+            skills: [{ name: 'JavaScript', logo: jsIcon }, { name: 'CSS', logo: cssLogo }, { name: 'HTML', logo: htmlLogo }, { name: 'Sass', logo: sassIcon }, { name: 'React', logo: reactIcon }, { name: 'Node.js', logo: nodeJsIcon }],
             timeframe: 'Pair Project | 2 days',
             description: 'The second project is to build a React application that consumes a public API. We decided to create a website that showcases TV series and allows users to filter them by genre and sort them alphabetically or by best ratings. The app includes a router with several pages and links to official websites.',
             deployment: 'https://familymovienight.netlify.app/',
-            GitHubLink: 'https://github.com/Annel18/GA-SEI-P2-TVshows/blob/main/README.md',
+            GitHubLink: 'https://github.com/Annel18/GA-SEI-P2-TVshows/',
             img: project2Img
         },
         {
             name: 'Rent.Art',
-            skills: [jsIcon, cssLogo, htmlLogo, sassIcon, reactIcon, nodeJsIcon, mongoDbIcon, expressIcon, herokuIcon],
+            skills: [{ name: 'JavaScript', logo: jsIcon }, { name: 'CSS', logo: cssLogo }, { name: 'HTML', logo: htmlLogo }, { name: 'Sass', logo: sassIcon }, { name: 'React', logo: reactIcon }, { name: 'Node.js', logo: nodeJsIcon }, { name: 'MongoDB', logo: mongoDbIcon }, { name: 'Express', logo: expressIcon }, { name: 'Heroku', logo: herokuIcon }],
             timeframe: 'Group Project | 10 days',
             description: 'This third project, a full-stack group effort, resulted in a website enabling customers to rent artwork from an online gallery for their homes. Utilising an Express API and a Mongo database, our backend serves data, consumed by a separate React frontend. We implemented four user profiles (Public, Art Appreciator, Artist, Admin), each with varied functionalities secured through routes and proper authorizations. CRUD methods manage art collections and user profiles. One of my main focuses was the index page with all its filtering functionalities.',
             deployment: 'https://artrent-6d502dba1723.herokuapp.com/',
-            GitHubLink: 'https://github.com/Annel18/GA-SEI-P3-Rentart/blob/main/README.md',
+            GitHubLink: 'https://github.com/Annel18/GA-SEI-P3-Rentart/',
             img: project3Img
         },
         {
             name: 'Buildings.Data',
-            skills: [jsIcon, cssLogo, htmlLogo, sassIcon, reactIcon, nodeJsIcon, pyIcon, djangoIcon, postgreSqlIcon, herokuIcon],
+            skills: [{ name: 'JavaScript', logo: jsIcon }, { name: 'CSS', logo: cssLogo }, { name: 'HTML', logo: htmlLogo }, { name: 'Sass', logo: sassIcon }, { name: 'React', logo: reactIcon }, { name: 'Node.js', logo: nodeJsIcon }, { name: 'Python', logo: pyIcon }, { name: 'Django', logo: djangoIcon }, { name: 'PostgreSQL', logo: postgreSqlIcon }, { name: 'Heroku', logo: herokuIcon }],
             timeframe: 'Solo Project | 10 days',
-            description: 'This final GA project is a solo endeavour, presenting an application for architects to streamline building briefs and consolidate \'Room Data Sheets\' for non-domestic sectors (eg. schools), where many rooms share identical characteristics, this tool assists architects in defining and compiling specifics such as finishes, furniture, and equipment into project-specific templates. The backend database has been implemented in Python using Django Framework and consumed in React on the client side.',
+            description: 'This final GA project is a solo endeavour, presenting an application for architects to streamline building briefs and consolidate \'Room Data Sheets\' for non-domestic sectors (eg. schools), where many rooms share identical characteristics. This tool assists architects in defining and compiling specifics such as finishes, furniture, and equipment into project-specific templates. The backend database has been implemented in Python using Django Framework and consumed in React on the client side.',
             deployment: 'https://building-data-f6ca9aff8146.herokuapp.com/',
             GitHubLink: 'https://github.com/Annel18/GA-SEI-P4-Building_Data',
             img: project4Img
@@ -77,38 +77,44 @@ export default function Projects() {
     return (
         <section className="page" id="projects" >
             <h1 className="section-title">Projects</h1>
+            <p className="section-sub">The four projects presented here were the main deliverables as part of the General Assembly Software Engineering Bootcamp curriculum, a twelve-week intensive course equipping students for tech careers.</p>
             {/* <div className='carousel-page'> */}
             {/* touch means you can use with touchscreen, wrap continues with no hard stop */}
-            <Carousel touch={true} wrap={true} data-bs-theme="dark" slide={true} interval={null} activeIndex={index} onSelect={handleSelect}>
+            <Carousel touch={true} wrap={true} data-bs-theme="dark" slide={true} interval={null} activeIndex={index} onSelect={handleSelect} >
                 {/* map through art for carousel to cycle through */}
                 {projects
                     .map((project, id) => {
                         return (
                             // has link to go to individual ID page
-                            <Carousel.Item key={id}>
+                            <Carousel.Item key={id} >
                                 <Container fluid
-                                className="container-carousel"
+                                // className="container-carousel"
                                 >
                                     <Row
-                                        className="items-list"
+                                    // className="items-list"
                                     >
                                         <Col
-                                            className='single-container'
-                                            // sm={true}
-                                            xs={0}
+                                            className='poster'
+                                            xs={12}
                                             s={6}
                                             md={6}
                                             lg={6}
                                             xl={6}
                                             xxl={6}
-                                        style={{ backgroundImage: `url(${project.img})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgrountPosition:'center' }}
+                                        style={{ backgroundImage: `url(${project.img})`}}
                                         >
                                             {/* <div className="poster-container">
-                                                <div className="poster" style={{ backgroundImage: `url(${project.img})` }}></div>
+                                                <img className="poster" style={{ backgroundImage: `url(${project.img})` }}></img>
                                             </div> */}
                                         </Col>
                                         <Col
-
+                                        // className='poster'
+                                            xs={12}
+                                            s={6}
+                                            md={6}
+                                            lg={6}
+                                            xl={6}
+                                            xxl={6}
                                         >
                                             <Row><h3>{project.name}</h3></Row>
                                             <Row><p>{project.timeframe}</p></Row>
@@ -125,9 +131,10 @@ export default function Projects() {
                                                                 lg={2}
                                                                 xl={1}
                                                                 xxl={1}
+                                                                title={skill.name}
                                                             >
                                                                 <div className="rails" style={{ height: '5rem' }}>
-                                                                    <img className="thumbnail" src={skill} alt={skill} />
+                                                                    <img className="thumbnail" src={skill.logo} alt={skill.name} />
                                                                 </div>
                                                             </Col>
                                                         )
