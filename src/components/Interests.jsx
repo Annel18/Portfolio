@@ -3,6 +3,7 @@
 import { Container, Row, Col } from "react-bootstrap"
 import knitLogo from '../assets/icons/knittingLogo.svg'
 import circuit from '../assets/icons/circuit.svg'
+import musicLogo from '../assets/icons/musicLogo.svg'
 
 
 
@@ -19,6 +20,11 @@ export default function Interests() {
             img: circuit,
             description: '<p>I enjoy fiddling with Processing and Arduino and I recently made a touch lamp with conductive paint, LED strips and frosted glass. Playing with Arduino breadboards kept me busy in lockdown.</p>'
         },
+        {
+            title: 'Music',
+            img: musicLogo,
+            description: '<p>I play the violin and piano</p>'
+        }
     ]
 
     return (
