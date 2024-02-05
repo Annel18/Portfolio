@@ -28,7 +28,7 @@ export default function AboutMe() {
         { logo: pyIcon, name: 'Python' },
         { logo: djangoIcon, name: 'Django' },
         { logo: postgreSqlIcon, name: 'PostgreSQL' },
-        { logo: mongoDbIcon, name: 'MangoDB' },
+        { logo: mongoDbIcon, name: 'MongoDB' },
         { logo: expressIcon, name: 'Express' },
         { logo: photoShopIcon, name: 'PhotoShop' },
         { logo: illustratorIcon, name: 'Illustrator' },
