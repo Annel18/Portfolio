@@ -23,7 +23,7 @@ export default function Interests() {
         {
             title: 'Music',
             img: musicLogo,
-            description: '<p>I play the violin and piano</p>'
+            description: '<p style="padding-bottom:3rem;">I also enjoy playing the violin and piano as a hobby.</p>'
         }
     ]
 
