@@ -34,7 +34,7 @@ export default function Projects() {
             timeframe: 'Solo Project | 7 days',
             description: 'This first project is a grid-based game inspired by the classic Windows PC game. Using vanilla JavaScript for DOM manipulation, this first project includes separate files for HTML, CSS, and JS. The chosen theme is ‘The Three Little Pigs,’ where the game levels follow the tale\'s storyline.',
             deployment: 'https://annel18.github.io/GA-SEI-P1-Minesweeper/',
-            GitHubLink: 'https://github.com/Annel18/GA-SEI-P1-Minesweeper/',
+            GitHubLink: 'https://github.com/Annel18/GA-SEI-P1-Minesweeper',
             img: project1Img
         },
         {
@@ -43,7 +43,7 @@ export default function Projects() {
             timeframe: 'Pair Project | 2 days',
             description: 'The second project is to build a React application that consumes a public API. We decided to create a website that showcases TV series and allows users to filter them by genre and sort them alphabetically or by best ratings. The app includes a router with several pages and links to official websites.',
             deployment: 'https://familymovienight.netlify.app/',
-            GitHubLink: 'https://github.com/Annel18/GA-SEI-P2-TVshows/',
+            GitHubLink: 'https://github.com/Annel18/GA-SEI-P2-TVshows',
             img: project2Img
         },
         {
@@ -52,7 +52,7 @@ export default function Projects() {
             timeframe: 'Group Project | 10 days',
             description: 'This third project, a full-stack group effort, resulted in a website enabling customers to rent artwork from an online gallery for their homes. Utilising an Express API and a Mongo database, our backend serves data, consumed by a separate React frontend. We implemented four user profiles (Public, Art Appreciator, Artist, Admin), each with varied functionalities secured through routes and proper authorizations. CRUD methods manage art collections and user profiles. One of my main focuses was the index page with all its filtering functionalities.',
             deployment: 'https://artrent-6d502dba1723.herokuapp.com/',
-            GitHubLink: 'https://github.com/Annel18/GA-SEI-P3-Rentart/',
+            GitHubLink: 'https://github.com/Annel18/GA-SEI-P3-Rentart',
             img: project3Img
         },
         {
