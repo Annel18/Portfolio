@@ -21,7 +21,6 @@ export default function Contacts() {
                 <a href='https://github.com/Annel18' target="_blank">
                     <h5><img style={{ height: '2rem' }} src={gitHubIcon} alt={gitHubIcon} /> GitHub</h5>
                 </a>
-
             </div >
         </section>
     )
