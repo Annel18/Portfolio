@@ -51,7 +51,7 @@ export default function Projects() {
             skills: [{ name: 'JavaScript', logo: jsIcon }, { name: 'CSS', logo: cssLogo }, { name: 'HTML', logo: htmlLogo }, { name: 'Sass', logo: sassIcon }, { name: 'React', logo: reactIcon }, { name: 'Node.js', logo: nodeJsIcon }, { name: 'MongoDB', logo: mongoDbIcon }, { name: 'Express', logo: expressIcon }, { name: 'Heroku', logo: herokuIcon }],
             timeframe: 'Group Project | 10 days',
             description: 'This third project, a full-stack group effort, resulted in a website enabling customers to rent artwork from an online gallery for their homes. Utilising an Express API and a Mongo database, our backend serves data, consumed by a separate React frontend. We implemented four user profiles (Public, Art Appreciator, Artist, Admin), each with varied functionalities secured through routes and proper authorizations. CRUD methods manage art collections and user profiles. One of my main focuses was the index page with all its filtering functionalities.',
-            deployment: 'https://artrent-6d502dba1723.herokuapp.com/',
+            deployment: 'https://art-rent-3ccae6efd44a.herokuapp.com/',
             GitHubLink: 'https://github.com/Annel18/GA-SEI-P3-Rentart',
             img: project3Img
         },
