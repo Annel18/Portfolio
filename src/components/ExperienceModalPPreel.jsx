@@ -159,22 +159,23 @@ export default function ExperienceModalPPreel() {
                             // has link to go to individual ID page
                             <Carousel.Item key={id}>
                                 <Container
-                                // fluid
-                                className="container-carousel"
+                                    // fluid
+                                    className="container-carousel"
                                 >
                                     <Row
                                         className="items-list"
                                     >
                                         <Col
-                                            className='single-container'
+                                            className='poster'
+                                            // className='single-container'
                                             // sm={true}
-                                            xs={0}
+                                            xs={12}
                                             s={6}
                                             md={6}
                                             lg={6}
                                             xl={6}
                                             xxl={6}
-                                        style={{ backgroundImage: `url(${project.image})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition:'center' }}
+                                            style={{ backgroundImage: `url(${project.image})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}
                                         >
                                             {/* <div className="poster-container">
                                                 <img className="poster" href={project.image} />
